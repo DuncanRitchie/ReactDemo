@@ -1,8 +1,9 @@
 .container {
-  width:95vw;
+  width:100vw;
   display:grid;
   grid-template-areas: 'gallery description'
                         'price contacts';
+  background-color:rgb(242,242,242);
 }
 
 .gallery {
@@ -20,13 +21,25 @@
   border-radius:2px;
 }
 
-img {
-  width:24vw;
+.galleryImg {
+  width:25vw;
 }
 
 .descriptionBox {
   grid-area: description;
-  width:45vw;
+  width:50vw;
+}
+
+.likeButton {
+  right:0;
+  position:absolute;
+  padding:16px;
+  border:2px solid lightgrey;
+  border-radius:50%;
+}
+
+.likeButton i {
+  color:magenta;
 }
 
 .priceBox {
@@ -36,9 +49,19 @@ img {
 
 .contactsBox {
   grid-area:contacts;
+  display:flex;
   width:50vw;
 }
 
+.contactsBox div {
+  padding:10px;
+}
+
+.agentLogo {
+  height:60px;
+}
+
+.phoneNumber
 
 
 

@@ -76,7 +76,7 @@ const PhotosIcons = (props) => {
 const Photo = (props) => {
   return (
     <div>
-      <img src={props.imageSource}/>
+      <img className="galleryImg" src={props.imageSource}/>
     </div>
   )
 }
@@ -94,7 +94,7 @@ const DescriptionBox = (props) => {
 
 const PriceBox = (props) => {
   return (
-    <div>
+    <div className="priceBox">
       <p>{props.price}</p>
       <p>{props.priceDetail}</p>
     </div>
@@ -103,9 +103,9 @@ const PriceBox = (props) => {
 
 const ContactsBox = (props) => {
   return (
-    <div>
-      <p>
+    <div class="contactsBox">
         <Logo logoSource={props.agentLogo}/>
+      <p>
         <span class="phoneNumber">{props.phoneNumber}</span><br />
         <span class="localCallRate">Local call rate</span>
       </p>
@@ -117,7 +117,7 @@ const ContactsBox = (props) => {
 const Logo = (props) => {
   return (
     <div>
-      <img src={props.logoSource}/>
+      <img src={props.logoSource} className="agentLogo"/>
     </div>
   )
 }
@@ -126,7 +126,7 @@ const EmailAgent = (props) => {
   return (
     <div>
       <p>
-        <img class="emailIcon"/>
+      <i class="far fa-envelope"></i>
         Email agent
       </p>
     </div>
@@ -135,8 +135,8 @@ const EmailAgent = (props) => {
 
 const LikeButton = (props) => {
   return (
-    <div>
-      <button><i class="far fa-heart"></i></button>
+    <div class="likeButton">
+      <i class="far fa-heart"></i>
     </div>
   )
 }
