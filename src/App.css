@@ -1,6 +1,49 @@
-.App {
-  text-align: center;
+.container {
+  width:95vw;
+  display:grid;
+  grid-template-areas: 'gallery description'
+                        'price contacts';
 }
+
+.gallery {
+  grid-area: gallery;
+  display:flex;
+  width:50vw;
+}
+
+.photosIcons {
+  background-color: rgba(0,0,0,0.6);
+  color:white;
+  position:absolute;
+  margin: 3px;
+  padding:6px;
+  border-radius:2px;
+}
+
+img {
+  width:24vw;
+}
+
+.descriptionBox {
+  grid-area: description;
+  width:45vw;
+}
+
+.priceBox {
+  grid-area:price;
+  width:50vw;
+}
+
+.contactsBox {
+  grid-area:contacts;
+  width:50vw;
+}
+
+
+
+
+
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
