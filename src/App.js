@@ -8,9 +8,10 @@ let house1 = {
   title:"3 bedroom character property for sale",
   address:"Townfield Lane, Mollington, Chester",
   description: `AN EXCITING ADDITION TO THE PROPERTY MARKET! "Ardmore" is quite simply a stunning character filled Victorian home, abundant with light filled rooms of impressive proportions. Boasting a contemporary interior the property has`,
+  addedOn:"27/11/2018",
   addedBy:"Bradshaw Farnham & Lea",
   price:"£500,000",
-  priceDetails:"Offers Over",
+  priceDetail:"Offers Over",
   agentLogo:"https://bflhomes.com/images/logo-bflhomes.png",
   phoneNumber:"0151 954 0322",
 }
@@ -25,7 +26,7 @@ let house2 = {
   addedOn:"21/12/2018",
   addedBy:"Rickitt Partnership",
   price:"£500,000",
-  priceDetails:"",
+  priceDetail:"",
   agentLogo:"https://media.rightmove.co.uk/176k/175901/branch_photo_175901_0000.png",
   phoneNumber:"01244 955183",
 }
@@ -34,20 +35,28 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container numberOfPhotos="34" imageSource1={house1.imageSource1} imageSource2={house1.imageSource2} title={house1.title} address={house1.address} description={house1.description} addedOn={house1.addedOn} addedBy={house1.addedBy} price={house1.price} priceDetails={house1.priceDetails} agentLogo={house1.agentLogo} phoneNumber={house1.phoneNumber}/>
-        <Container numberOfPhotos="15" imageSource1={house2.imageSource1} imageSource2={house2.imageSource2} title={house2.title} address={house2.address} description={house2.description} addedOn={house2.addedOn} addedBy={house2.addedBy} price={house2.price} priceDetails={house2.priceDetails} agentLogo={house2.agentLogo} phoneNumber={house2.phoneNumber}/>
+        <Containers/>
       </div>
     );
   }
 }
 
+const Containers = (props) => {
+  return (
+    <div className="containers">
+        <Container numberOfPhotos="34" imageSource1={house1.imageSource1} imageSource2={house1.imageSource2} title={house1.title} address={house1.address} description={house1.description} addedOn={house1.addedOn} addedBy={house1.addedBy} price={house1.price} priceDetail={house1.priceDetail} agentLogo={house1.agentLogo} phoneNumber={house1.phoneNumber}/>
+        <Container numberOfPhotos="15" imageSource1={house2.imageSource1} imageSource2={house2.imageSource2} title={house2.title} address={house2.address} description={house2.description} addedOn={house2.addedOn} addedBy={house2.addedBy} price={house2.price} priceDetail={house2.priceDetail} agentLogo={house2.agentLogo} phoneNumber={house2.phoneNumber}/>
+    </div>
+  )
+}
+
 const Container = (props) => {
   return (
-    <div>
+    <div className="container">
       <Gallery imageSource1={props.imageSource1} imageSource2={props.imageSource2} numberOfPhotos={props.numberOfPhotos} />
       <DescriptionBox title={props.title} address={props.address} description={props.description} addedOn={props.addedOn} addedBy={props.addedBy}/>
       <LikeButton />
-      <PriceBox price={props.price} priceDetails={props.priceDetails}/>
+      <PriceBox price={props.price} priceDetail={props.priceDetail}/>
       <ContactsBox agentLogo={props.agentLogo} phoneNumber={props.phoneNumber} />
     </div>
   )
@@ -66,9 +75,7 @@ const Gallery = (props) => {
 const PhotosIcons = (props) => {
   return (
     <div className="photosIcons">
-      <i class="fas fa-solar-panel"></i>
-      <i class="fas fa-camera"></i>
-      <span>{props.numberOfPhotos}</span>
+      <i className="fas fa-solar-panel"></i> <i className="fas fa-camera"></i> <span>{props.numberOfPhotos}</span>
     </div>
   )
 }
@@ -84,10 +91,10 @@ const Photo = (props) => {
 const DescriptionBox = (props) => {
   return (
     <div className="descriptionBox">
-      <h3>{props.title}</h3>
-      <p class="address">{props.address}</p>
-      <p>{props.description}</p>
-      <p class="addedOn">Added on {props.addedOn} by {props.addedBy}</p>
+      <h3 className="title">{props.title}</h3>
+      <p className="address">{props.address}</p>
+      <p className="description">{props.description}</p>
+      <p className="added">Added on {props.addedOn} by {props.addedBy}</p>
     </div>
   )
 }
@@ -95,7 +102,7 @@ const DescriptionBox = (props) => {
 const PriceBox = (props) => {
   return (
     <div className="priceBox">
-      <p>{props.price}</p>
+      <p className="price">{props.price}</p>
       <p>{props.priceDetail}</p>
     </div>
   )
@@ -103,11 +110,11 @@ const PriceBox = (props) => {
 
 const ContactsBox = (props) => {
   return (
-    <div class="contactsBox">
+    <div className="contactsBox">
         <Logo logoSource={props.agentLogo}/>
       <p>
-        <span class="phoneNumber">{props.phoneNumber}</span><br />
-        <span class="localCallRate">Local call rate</span>
+        <span className="phoneNumber">{props.phoneNumber}</span><br />
+        <span className="localCallRate">Local call rate</span>
       </p>
       <EmailAgent/>
     </div>
@@ -126,8 +133,7 @@ const EmailAgent = (props) => {
   return (
     <div>
       <p>
-      <i class="far fa-envelope"></i>
-        Email agent
+        <i className="far fa-envelope"></i> Email agent
       </p>
     </div>
   )
@@ -135,8 +141,8 @@ const EmailAgent = (props) => {
 
 const LikeButton = (props) => {
   return (
-    <div class="likeButton">
-      <i class="far fa-heart"></i>
+    <div className="likeButton">
+      <i className="far fa-heart"></i>
     </div>
   )
 }
