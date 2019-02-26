@@ -57,7 +57,7 @@ const Container = (props) => {
       <DescriptionBox title={props.title} address={props.address} description={props.description} addedOn={props.addedOn} addedBy={props.addedBy}/>
       <LikeButton />
       <PriceBox price={props.price} priceDetail={props.priceDetail}/>
-      <ContactsBox agentLogo={props.agentLogo} phoneNumber={props.phoneNumber} />
+      <ContactsBox agentLogo={props.agentLogo} addedBy={props.addedBy} phoneNumber={props.phoneNumber} />
     </div>
   )
 }
@@ -66,8 +66,8 @@ const Gallery = (props) => {
   return (
     <div className="gallery">
       <PhotosIcons numberOfPhotos={props.numberOfPhotos} />
-      <Photo imageSource={props.imageSource1} />
-      <Photo imageSource={props.imageSource2} />
+      <Photo imageSource={props.imageSource1} imageAlt="Photo 1" />
+      <Photo imageSource={props.imageSource2} imageAlt="Photo 2" />
     </div>
   )
 }
@@ -83,7 +83,7 @@ const PhotosIcons = (props) => {
 const Photo = (props) => {
   return (
     <div>
-      <img className="galleryImg" src={props.imageSource}/>
+      <img className="galleryImg" src={props.imageSource} alt={props.imageAlt}/>
     </div>
   )
 }
@@ -111,7 +111,7 @@ const PriceBox = (props) => {
 const ContactsBox = (props) => {
   return (
     <div className="contactsBox">
-        <Logo logoSource={props.agentLogo}/>
+        <Logo logoSource={props.agentLogo} addedBy={props.addedBy}/>
       <p>
         <span className="phoneNumber">{props.phoneNumber}</span><br />
         <span className="localCallRate">Local call rate</span>
@@ -124,7 +124,7 @@ const ContactsBox = (props) => {
 const Logo = (props) => {
   return (
     <div>
-      <img src={props.logoSource} className="agentLogo"/>
+      <img src={props.logoSource} className="agentLogo" alt={props.addedBy+" logo"}/>
     </div>
   )
 }
