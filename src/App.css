@@ -78,7 +78,7 @@
 .likeButton {
   right:5vw;
   position:absolute;
-  transform:translateY(100%);
+  transform:translateY(6vw);
   padding:16px;
   border:2px solid lightgrey;
   border-radius:50%;
