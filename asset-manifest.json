@@ -1,13 +1,22 @@
 {
-  "main.css": "/ReactDemo/static/css/main.ce8e3d49.chunk.css",
-  "main.js": "/ReactDemo/static/js/main.a8f99607.chunk.js",
-  "main.js.map": "/ReactDemo/static/js/main.a8f99607.chunk.js.map",
-  "runtime~main.js": "/ReactDemo/static/js/runtime~main.1140bd63.js",
-  "runtime~main.js.map": "/ReactDemo/static/js/runtime~main.1140bd63.js.map",
-  "static/js/2.c88c70e5.chunk.js": "/ReactDemo/static/js/2.c88c70e5.chunk.js",
-  "static/js/2.c88c70e5.chunk.js.map": "/ReactDemo/static/js/2.c88c70e5.chunk.js.map",
-  "index.html": "/ReactDemo/index.html",
-  "precache-manifest.492b28a48d70dc034403c51549890f7a.js": "/ReactDemo/precache-manifest.492b28a48d70dc034403c51549890f7a.js",
-  "service-worker.js": "/ReactDemo/service-worker.js",
-  "static/css/main.ce8e3d49.chunk.css.map": "/ReactDemo/static/css/main.ce8e3d49.chunk.css.map"
+  "files": {
+    "main.css": "/react-demo/static/css/main.d63d76f2.chunk.css",
+    "main.js": "/react-demo/static/js/main.f3729272.chunk.js",
+    "main.js.map": "/react-demo/static/js/main.f3729272.chunk.js.map",
+    "runtime-main.js": "/react-demo/static/js/runtime-main.683407a3.js",
+    "runtime-main.js.map": "/react-demo/static/js/runtime-main.683407a3.js.map",
+    "static/js/2.e4126d1c.chunk.js": "/react-demo/static/js/2.e4126d1c.chunk.js",
+    "static/js/2.e4126d1c.chunk.js.map": "/react-demo/static/js/2.e4126d1c.chunk.js.map",
+    "index.html": "/react-demo/index.html",
+    "precache-manifest.0f719e8fb3287ebd1058b73d276ca17d.js": "/react-demo/precache-manifest.0f719e8fb3287ebd1058b73d276ca17d.js",
+    "service-worker.js": "/react-demo/service-worker.js",
+    "static/css/main.d63d76f2.chunk.css.map": "/react-demo/static/css/main.d63d76f2.chunk.css.map",
+    "static/js/2.e4126d1c.chunk.js.LICENSE.txt": "/react-demo/static/js/2.e4126d1c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.683407a3.js",
+    "static/js/2.e4126d1c.chunk.js",
+    "static/css/main.d63d76f2.chunk.css",
+    "static/js/main.f3729272.chunk.js"
+  ]
 }
