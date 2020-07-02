@@ -5,4 +5,4 @@ I did have a screenshot showing what I was trying to emulate, but I no longer ha
 
 Here’s a screenshot of my rendition, as viewed in Opera: 
 
-![Screenshot of my re-creation](../blob/main/recreation-screenshot.png)
+![Screenshot of my re-creation](./recreation-screenshot.png)
